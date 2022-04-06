@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#lang {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+}
+.language {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 35px;
+  background: rgb(223, 208, 208);
+  border-radius: 10px;
+}
+.language::before {
+  content: "English";
+  position: absolute;
+  margin-top: 10px;
+  width: 100px;
+  text-align: center;
+  font-weight: 600;
+}
+.language:checked {
+  background: rgb(144, 226, 144);
+}
+.language:last-child::before {
+  content: "Urdu";
+}
+audio {
+  margin-top: 40px;
+  width: 600px;
+}
+main {
+  display: grid;
+  place-items: center;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+iframe {
+  margin: 2px 0;
+  width: 300px;
+  height: 200px;
+}
+@media (max-width: 630px) {
+  audio {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  iframe {
+    width: 330px;
+  }
+}

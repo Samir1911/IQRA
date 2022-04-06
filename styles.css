@@ -1,0 +1,134 @@
+body {
+  background: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main {
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main img {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.container {
+  background: white;
+  text-align: center;
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+  margin: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+.container p {
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 300px;
+  font-weight: 800;
+}
+.title {
+  color: rgb(10, 10, 10);
+}
+@media (max-width: 1150px) {
+  .container,
+  .container p,
+  main img {
+    width: 250px;
+  }
+  .container {
+    margin: 20px;
+    height: 300px;
+  }
+  main {
+    padding: 10px;
+  }
+  main img {
+    height: 150px;
+  }
+  .container p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 910px) {
+  .container,
+  .container p,
+  main img {
+    width: 200px;
+  }
+  .container p {
+    font-size: 15px;
+  }
+  .container {
+    height: 250px;
+  }
+  main img {
+    height: 125px;
+  }
+}
+@media (max-width: 760px) {
+  .container,
+  .container p,
+  main img {
+    width: 170px;
+  }
+  main {
+    padding: 5px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 200px 250px;
+    grid-template-areas: "i t" "i d";
+    height: 150px;
+    width: 450px;
+    border-radius: 10px;
+  }
+  .container img {
+    grid-area: i;
+    width: 200px;
+    height: 150px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .title {
+    grid-area: t;
+    display: flex;
+    align-items: center;
+  }
+  .d {
+    grid-area: d;
+  }
+  .container p {
+    width: 250px;
+    text-align: left;
+  }
+}
+@media (max-width: 470px) {
+  .container {
+    grid-template-columns: 130px 200px;
+    height: 100px;
+    margin: 5px;
+  }
+  .container img {
+    height: 100px;
+    width: 130px;
+  }
+  .container p {
+    width: 200px;
+  }
+}

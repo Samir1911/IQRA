@@ -1,0 +1,27 @@
+fieldset {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0px;
+  align-items: center;
+}
+iframe {
+  width: 300px;
+  height: 200px;
+  margin: 2px 0;
+}
+a {
+  text-decoration: none;
+}
+legend {
+  text-align: center;
+  font-size: 30px;
+  color: orange;
+}
+@media(max-width:800px){
+  fieldset a {
+    display: block;
+  }
+}

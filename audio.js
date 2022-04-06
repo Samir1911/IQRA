@@ -1,0 +1,137 @@
+a=[
+    {
+        mp3:["1VmM90crnenefkFBz-0IHWPSsz5oDUIGY",""],
+        links:["0HUR3Q0GoWQ","pyPgqXVgmsU","KZ1yXIvncQ0","POGgOkPX1gM"," wwUYF1F6x1o","UxGj8zdtvSM","1VcLRZopyX4","nIbnUMqLQ78","c3SQom0PP6M","ATrRK2jRh8U","lgm3puP3tMA","r5fC9QlPCW8"]
+    },
+    {
+        mp3:["1U9toeqagEkoXwvkZDQyOGi231IwZFQ7g",""],
+        links:["RdATyl93tQE","_gyBufskGWA","N-O3qcUEYT4","tQGQS0JaCbU","v5vfvTQBJTQ","JCopSrEYmAg","BljrAME1LLw","NsnutNolbDI","vZkMfbtbE9c"]
+    },
+    {
+        mp3:"",
+        links:["VxmvifsI3v8","Lj6KldGj5kk","6Ycq73ddvM","a4IXl4V4prg","hju3CKvBO50"]
+    },
+    {
+        mp3:"",
+        links:["kb7bDO5MjSc","qdCGKrFxQjU","bCGGUEy6I0c","v6IlDV3cGgY"]
+    },
+    {
+        mp3:"",
+        links:["c8ohMDfNu7k","KNrijQxD1E4","ig0bF2tBrRA","MjK4_iBtpCc","wK_ozS5nDDo","GsKWMN-zbDY","Ah_J9qmigUI","hX7dt9HWnTk","Qw-tzKANGfA","nKXze9ac2DE"]
+    },
+    {
+        mp3:"",
+        links:["nz6oNGK-u6o","L7SRfdIziJo","GQpCISK9Q8E","yVbkVKXUuF0"]
+    },
+    {
+        mp3:"",
+        links:["XuFXCdWr1Y8","NSMU4TGMUQs","WSwngNnDGQo","tgRC8_BZGtU","uBO5WO857PA","xg20sCIDLcw","3yEkJWyVJiM","9G_8BjvO92k","xZoBB8TsPNw"]
+    },
+    {
+        mp3:"",
+        links:["xZoBB8TsPNw","TIkZJ5rBpjA","Iu5PDOm2q8E","LOJlICXY6RE","TIkZJ5rBpjA","Yj-07qY8i3I"]
+    },
+    {
+        mp3:"",
+        links:["ZgJuK0OtRf8","2F8puRkwWWw","eq1mTa-nZD8","8bnrhQn7dlk","YNGqrzkFp_4","QEtmSLjgbOU","bG7Ww6o4ijY"]
+    },
+    {
+        mp3:"",
+        links:["6IqxqwxwAqE","DdWxCVYAOCk","Mn1z6FW4pJM","d3y7GDhPd8w","-_gF_maxocY","70ocAUjEZ0Q","jQfb5CV24Bs"]
+    },
+    {
+        mp3:"",
+        links:["hlKlYG0XFQM","nTKVS0fWuM4","0xY5SAcXtj0","om-a-qoI5qU","KoShExgPVdw","dQVMdh6d3h0"]
+    },
+    {
+        mp3:"",
+        links:["UjFMWWTWvuw","SmcQOb_FPO4","l4hZeDvb9Po","ECUoUimUUP8","QVYAl5U7knA","sST1pfb1c3I","y6In5hRsNYY"]
+    },
+    {
+        mp3:"",
+        links:["uAn4uPDKJ1k","n281Zyywyn4","aUSp3vE_kGA","rCazhBAW7a8","zhSLUvGQjLo","P-mhnIIut8E","wcSLID34cto"]
+    },
+    {
+        mp3:"",
+        links:["T9B38w0zrSg","BOoMxN8Qbm0","FPmet05fYCU","klxBk19RBs0","iUEJF058b2s","h2bQBCvr8Sg","lX0viYVjIh0","_gyBufskGWA","hd3OYnFfci4","p1VZBzBA718","049aBt23ieM","cqksuXlJqbU","qol89-yeIw0"]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    },
+    {
+        mp3:"",
+        links:[]
+    }
+]
+var cont=document.querySelector("#container");
+var audio=document.querySelector("audio")
+s=""
+var v=parseInt(localStorage.val)
+a[v-1].links.forEach(li=>{
+    link="https://youtube.com/embed/"+li;
+    s+=`<iframe  src=${link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `
+})
+cont.innerHTML=s;
+var lang=document.querySelectorAll(".language");
+s="https://docs.google.com/uc?export=open&id="+a[v-1].mp3[0];
+lang.forEach(lan=>{
+    lan.addEventListener("click",function(){
+        if(lan.value=="1"){
+            s="https://docs.google.com/uc?export=open&id="+a[v-1].mp3[0];
+        }
+        else{
+            s="https://docs.google.com/uc?export=open&id="+a[v-1].mp3[1];
+        }
+    })
+})
+audio.src=s;

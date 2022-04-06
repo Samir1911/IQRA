@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#logo {
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  box-sizing: border-box;
+}
+#menu,
+aside {
+  display: none;
+}
+nav {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+@media (max-width: 1150px) {
+  nav a {
+    font-size: 18px;
+  }
+  main,
+  header {
+    padding: 10px;
+  }
+}
+@media (max-width: 760px) {
+  nav {
+    width: 450px;
+  }
+  nav a {
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 650px) {
+  nav {
+    width: 350px;
+  }
+  nav a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 470px) {
+  nav {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  aside {
+    position: absolute;
+    margin-left: 470px;
+    margin-top: 396px;
+    background: white;
+    width: 250px;
+    height: 500px;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  #close {
+    width: 25px;
+    height: 25px;
+  }
+  aside a {
+    margin: 20px 0;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: black;
+  }
+}
